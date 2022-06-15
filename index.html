@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+   <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>CLOCK</title>
+<script>
+    // document.getElementById('demo').style.display =block;
+    function myFunction() {
+    let a;
+    let date;
+    let time;
+    let day;
+    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    
+
+    
+
+    
+    
+        setInterval(() => {
+    a= new Date();
+     date = a.toLocaleDateString();
+    
+    time= a.getHours() +':' + a.getMinutes() + ':'+ a.getSeconds();
+    day = weekday[a.getDay()];
+    
+   document.getElementById('time').innerHTML =time;
+   document.getElementById('date').innerHTML =  date;
+   document.getElementById('day').innerHTML = day;
+
+   
+   
+}  ,1000);
+  document.getElementById('timeBlock').hidden=false;
+    }
+
+
+    
+  
+
+   
+</script>  
+
+
+</head>
+  <body>
+   
+   
+
+
+      <br> 
+      <br>
+      
+<center>
+      
+      <h1> welcome to  clock page  </h1>
+      <h3>please click on below button to  see the time</h3>
+      <br> <hr>
+      <p id='demo'></p>
+      
+      
+
+
+      
+      
+      <br>
+      <button onclick="myFunction()">Click here</button>
+      <br><br>
+
+      <div id="timeBlock" hidden =true class="container"> 
+          <!-- <p id="demo"  style="display:none"> -->
+      <h2>Current Time : <span id='time' ></span> </h2>
+       <br>  
+       <h2>  Date :  <span id='date'  ></span></h2>
+       <br>
+       <h2> Day is : <span id='day'></span> </h2>
+    </p>
+
+    </div>
+</center>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
+   
